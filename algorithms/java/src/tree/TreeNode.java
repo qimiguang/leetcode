@@ -8,11 +8,8 @@ public class TreeNode {
 
     public TreeNode(int val) {
         this.val = val;
-        this.left = this.right = null;
-    }
-
-    public TreeNode() {
-        
+        this.left = null;
+        this.right = null;
     }
 
 }
