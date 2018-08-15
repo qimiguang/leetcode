@@ -1,4 +1,4 @@
-package src;
+package src.string;
 
 /**
  * 709: Easy

@@ -1,4 +1,4 @@
-package src;
+package src.string;
 
 import java.util.HashSet;
 import java.util.Set;

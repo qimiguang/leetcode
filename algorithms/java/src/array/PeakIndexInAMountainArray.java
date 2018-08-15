@@ -1,4 +1,4 @@
-package src;
+package src.array;
 
 /**
  * 852: Easy

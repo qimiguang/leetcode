@@ -1,4 +1,4 @@
-package src;
+package src.bit;
 
 /**
  * 461: Easy
@@ -19,7 +19,7 @@ package src;
  * Explanation:
  * 1   (0 0 0 1)
  * 4   (0 1 0 0)
- *        ↑   ↑
+ * ↑   ↑
  * <p>
  * The above arrows point to positions where the corresponding bits are different.
  */
@@ -34,6 +34,7 @@ public class HammingDistance {
     public static int hammingDistance(int x, int y) {
         int count = 0;
         int n = x ^ y;
+        // 我最开始想到的是这种方式，其实可以更好的使用 bit shift 来解决，如 hammingDistance2
         char[] s = Integer.toBinaryString(n).toCharArray();
         for (char c : s) {
             if (c == '1') {
