@@ -27,18 +27,13 @@ import java.util.List;
 // todo
 public class AllPathsFromSourceToTarget {
 
-    public static void main(String[] args) {
-        int[][] graph = {{1, 2}, {3}, {3}, {}};
-        List<List<Integer>> lists = allPathsSourceTarget(graph);
-        System.out.println(lists);
-    }
-
-    public static List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         return solve(graph, 0);
     }
 
-    public static List<List<Integer>> solve(int[][] graph, int node) {
+    public List<List<Integer>> solve(int[][] graph, int node) {
         int N = graph.length;
+        // return condition
         List<List<Integer>> ans = new ArrayList();
         if (node == N - 1) {
             List<Integer> path = new ArrayList();
@@ -47,6 +42,7 @@ public class AllPathsFromSourceToTarget {
             return ans;
         }
 
+        // recursion
         for (int nei : graph[node]) {
             for (List<Integer> path : solve(graph, nei)) {
                 path.add(0, node);
