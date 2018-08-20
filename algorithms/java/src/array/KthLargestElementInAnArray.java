@@ -35,6 +35,7 @@ public class KthLargestElementInAnArray {
 
     // O(n * log k) + running time + O(K) memory
     public int findKthLargest2(int[] nums, int k) {
+        // 最小堆
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (int num : nums) {
             queue.add(num);
