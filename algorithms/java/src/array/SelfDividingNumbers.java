@@ -30,7 +30,7 @@ public class SelfDividingNumbers {
     }
 
     public static List<Integer> selfDividingNumbers(int left, int right) {
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
 
         for (; left <= right; left++) {
             char[] chars = String.valueOf(left).toCharArray();

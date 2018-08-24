@@ -27,9 +27,9 @@ public class LeafSimilarTrees {
     //
     //Space Complexity: O(T_1 + T_2), the space used in storing the leaf values.
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
-        List<Integer> list1 = new ArrayList<Integer>();
+        List<Integer> list1 = new ArrayList();
         dfs(root1, list1);
-        List<Integer> list2 = new ArrayList<Integer>();
+        List<Integer> list2 = new ArrayList();
         dfs(root2, list2);
 
         // 无序数组的比较
